@@ -1,0 +1,74 @@
+body {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) -10%, rgba(0, 194, 255, 1) 50%, rgba(255, 255, 255, 1) 200%);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    position: absolute;
+    width: 500px;
+    height: auto;
+    margin-left: -355px;
+    margin-top: -290px;
+}
+
+.hearts, .no-hearts {
+    position: absolute;
+    margin-top: -290px;
+    margin-left: 790px;
+}
+
+.heart-disappear{
+    display: none;
+}
+
+.hearts img, .no-hearts img {
+    width: auto;
+    height: 105px;
+    margin: 0 10px;
+}
+
+.main-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.text p {
+    margin: 0;
+    font-size: 30px;
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
+}
+
+#de-text{
+    display: inline-block;
+}
+
+#translation-input{
+    display: inline-block;
+    min-width: 200px;
+    box-sizing: border-box;
+    padding: 2px;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: transparent;
+    border-radius: 10px;
+    border: 3px solid black;
+    margin-left: 10px;
+    white-space: nowrap;
+    direction: ltr;
+    text-align: left;
+}
+
