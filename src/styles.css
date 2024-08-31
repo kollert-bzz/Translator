@@ -24,8 +24,14 @@ body {
     margin-left: 790px;
 }
 
-.heart-disappear{
-    display: none;
+.disappear{
+    opacity: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    pointer-events: none;
+    cursor: not-allowed;
 }
 
 .hearts img, .no-hearts img {
@@ -72,3 +78,32 @@ body {
     text-align: left;
 }
 
+#second-sect {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#second-sect button{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#third-sect {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 20px;
+    background-color: #24c223;
+    padding: 10px 40px;
+    min-width: 400px;
+}
+
+#third-sect p{
+    margin-top: -20px;
+    font-size: 25px;
+}
