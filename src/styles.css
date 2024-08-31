@@ -89,6 +89,12 @@ body {
     top: 100%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: transparent;
+    border: 2px solid black;
+}
+
+#second-sect button:hover{
+    font-size: 17px;
 }
 
 #third-sect {
@@ -106,4 +112,16 @@ body {
 #third-sect p{
     margin-top: -20px;
     font-size: 25px;
+}
+
+#third-sect div{
+    margin-top: -20px;
+    font-size: 17px;
+}
+
+#score {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
