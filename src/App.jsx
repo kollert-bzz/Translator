@@ -95,7 +95,7 @@ export default function App() {
     return (
         <>
             <div className="logo">
-                <img src="/img/logos/logo-no-background.png" alt="logo"/>
+                <img src="Translator/img/logos/logo-no-background.png" alt="logo"/>
             </div>
             <div className="no-hearts">
                 <img src="/img/minecraft_no_heart.png" alt="Health"/>
@@ -105,7 +105,7 @@ export default function App() {
             <div className="hearts">
                 <img src="/img/minecraft_heart.png" alt="Health"/>
                 <img src="/img/minecraft_heart.png" alt="Health"/>
-                <img src="/img/minecraft_heart.png" alt="Health"/>
+                <img src="/img/minecraft_heart.png" alt="Healthhh"/>
             </div>
             <div id="score">
                 Score: / Highscore
