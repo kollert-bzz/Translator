@@ -103,7 +103,7 @@ export default function App() {
                 <img src="../img/minecraft_no_heart.png" alt="Health"/>
             </div>
             <div className="hearts">
-                <img src="../img/minecraft_heart.png" alt="Health"/>
+                <img src="/img/minecraft_heart.png" alt="Health"/>
                 <img src="../img/minecraft_heart.png" alt="Health"/>
                 <img src="../img/minecraft_heart.png" alt="Health"/>
             </div>
