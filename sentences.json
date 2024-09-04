@@ -1,0 +1,380 @@
+{
+  "sentences": [
+    {
+      "english": "Working for Andeo is a great experience",
+      "german": "Für Andeo zu arbeiten ist eine grossartige Erfahrung"
+    },
+    {
+      "english": "The cat is on the roof.",
+      "german": "Die Katze ist auf dem Dach."
+    },
+    {
+      "english": "I love reading books.",
+      "german": "Ich liebe es, Bücher zu lesen."
+    },
+    {
+      "english": "She is going to the market.",
+      "german": "Sie geht auf den Markt."
+    },
+    {
+      "english": "He plays the guitar every day.",
+      "german": "Er spielt jeden Tag Gitarre."
+    },
+    {
+      "english": "The weather is nice today.",
+      "german": "Das Wetter ist heute schön."
+    },
+    {
+      "english": "They are studying for the exam.",
+      "german": "Sie lernen für die Prüfung."
+    },
+    {
+      "english": "Can you help me with this?",
+      "german": "Kannst du mir damit helfen?"
+    },
+    {
+      "english": "I need to buy some groceries.",
+      "german": "Ich muss ein paar Lebensmittel kaufen."
+    },
+    {
+      "english": "He is a very good friend.",
+      "german": "Er ist ein sehr guter Freund."
+    },
+    {
+      "english": "We are planning a trip to Germany.",
+      "german": "Wir planen eine Reise nach Deutschland."
+    },
+    {
+      "english": "The sun is shining brightly.",
+      "german": "Die Sonne scheint hell."
+    },
+    {
+      "english": "She has a beautiful voice.",
+      "german": "Sie hat eine schöne Stimme."
+    },
+    {
+      "english": "They live in a small village.",
+      "german": "Sie leben in einem kleinen Dorf."
+    },
+    {
+      "english": "The children are playing in the park.",
+      "german": "Die Kinder spielen im Park."
+    },
+    {
+      "english": "I am learning to speak German.",
+      "german": "Ich lerne Deutsch zu sprechen."
+    },
+    {
+      "english": "She works in a bank.",
+      "german": "Sie arbeitet in einer Bank."
+    },
+    {
+      "english": "He is very tall and strong.",
+      "german": "Er ist sehr gross und stark."
+    },
+    {
+      "english": "I enjoy cooking Italian food.",
+      "german": "Ich koche gerne italienisches Essen."
+    },
+    {
+      "english": "She bought a new dress yesterday.",
+      "german": "Sie hat gestern ein neues Kleid gekauft."
+    },
+    {
+      "english": "The movie was very exciting.",
+      "german": "Der Film war sehr spannend."
+    },
+    {
+      "english": "He often goes to the gym.",
+      "german": "Er geht oft ins Fitnessstudio."
+    },
+    {
+      "english": "We need to clean the house.",
+      "german": "Wir müssen das Haus sauber machen."
+    },
+    {
+      "english": "She has a lot of homework to do.",
+      "german": "Sie hat viel Hausaufgaben zu erledigen."
+    },
+    {
+      "english": "The dog is barking loudly.",
+      "german": "Der Hund bellt laut."
+    },
+    {
+      "english": "I like to drink coffee in the morning.",
+      "german": "Ich trinke morgens gerne Kaffee."
+    },
+    {
+      "english": "They are building a new house.",
+      "german": "Sie bauen ein neues Haus."
+    },
+    {
+      "english": "She is writing a letter to her friend.",
+      "german": "Sie schreibt einen Brief an ihre Freundin."
+    },
+    {
+      "english": "He is very good at math.",
+      "german": "Er ist sehr gut in Mathematik."
+    },
+    {
+      "english": "The book is on the table.",
+      "german": "Das Buch liegt auf dem Tisch."
+    },
+    {
+      "english": "We are going to the beach this weekend.",
+      "german": "Wir gehen dieses Wochenende zum Strand."
+    },
+    {
+      "english": "She is wearing a red dress.",
+      "german": "Sie trägt ein rotes Kleid."
+    },
+    {
+      "english": "The flowers are blooming in the garden.",
+      "german": "Die Blumen blühen im Garten."
+    },
+    {
+      "english": "He is reading a newspaper.",
+      "german": "Er liest eine Zeitung."
+    },
+    {
+      "english": "They are watching a football match.",
+      "german": "Sie sehen sich ein Fussballspiel an."
+    },
+    {
+      "english": "She is afraid of spiders.",
+      "german": "Sie hat Angst vor Spinnen."
+    },
+    {
+      "english": "The train leaves at 5 PM.",
+      "german": "Der Zug fährt um 17 Uhr ab."
+    },
+    {
+      "english": "I need to charge my phone.",
+      "german": "Ich muss mein Handy aufladen."
+    },
+    {
+      "english": "He is working on a new project.",
+      "german": "Er arbeitet an einem neuen Projekt."
+    },
+    {
+      "english": "They are learning a new language.",
+      "german": "Sie lernen eine neue Sprache."
+    },
+    {
+      "english": "She is taking a cooking class.",
+      "german": "Sie nimmt an einem Kochkurs teil."
+    },
+    {
+      "english": "The birds are singing in the trees.",
+      "german": "Die Vögel singen in den Bäumen."
+    },
+    {
+      "english": "He is going to the dentist tomorrow.",
+      "german": "Er geht morgen zum Zahnarzt."
+    },
+    {
+      "english": "We are visiting our grandparents this weekend.",
+      "german": "Wir besuchen dieses Wochenende unsere Grosseltern."
+    },
+    {
+      "english": "She is playing the piano.",
+      "german": "Sie spielt Klavier."
+    },
+    {
+      "english": "The car is parked in front of the house.",
+      "german": "Das Auto steht vor dem Haus."
+    },
+    {
+      "english": "He is wearing a blue shirt.",
+      "german": "Er trägt ein blaues Hemd."
+    },
+    {
+      "english": "I enjoy listening to music.",
+      "german": "Ich höre gerne Musik."
+    },
+    {
+      "english": "They are having dinner together.",
+      "german": "Sie essen zusammen zu Abend."
+    },
+    {
+      "english": "She is studying at the university.",
+      "german": "Sie studiert an der Universität."
+    },
+    {
+      "english": "The children are playing with their toys.",
+      "german": "Die Kinder spielen mit ihren Spielzeugen."
+    },
+    {
+      "english": "He is cooking dinner for his family.",
+      "german": "Er kocht das Abendessen für seine Familie."
+    },
+    {
+      "english": "We are planning to visit Paris next year.",
+      "german": "Wir planen, nächstes Jahr Paris zu besuchen."
+    },
+    {
+      "english": "She is very good at painting.",
+      "german": "Sie ist sehr gut im Malen."
+    },
+    {
+      "english": "The movie starts at 8 PM.",
+      "german": "Der Film beginnt um 20 Uhr."
+    },
+    {
+      "english": "He is playing chess with his friend.",
+      "german": "Er spielt Schach mit seinem Freund."
+    },
+    {
+      "english": "The bus is coming soon.",
+      "german": "Der Bus kommt bald."
+    },
+    {
+      "english": "She is writing a book.",
+      "german": "Sie schreibt ein Buch."
+    },
+    {
+      "english": "We are going for a walk in the park.",
+      "german": "Wir machen einen Spaziergang im Park."
+    },
+    {
+      "english": "He is a very talented musician.",
+      "german": "Er ist ein sehr talentierter Musiker."
+    },
+    {
+      "english": "The cake is delicious.",
+      "german": "Der Kuchen ist lecker."
+    },
+    {
+      "english": "She is a very kind person.",
+      "german": "Sie ist eine sehr freundliche Person."
+    },
+    {
+      "english": "He is driving to work.",
+      "german": "Er fährt zur Arbeit."
+    },
+    {
+      "english": "We are watching a documentary.",
+      "german": "Wir sehen uns eine Dokumentation an."
+    },
+    {
+      "english": "The hotel is near the beach.",
+      "german": "Das Hotel ist in der Nähe des Strandes."
+    },
+    {
+      "english": "She is learning to play the violin.",
+      "german": "Sie lernt, Geige zu spielen."
+    },
+    {
+      "english": "He is very good at sports.",
+      "german": "Er ist sehr gut im Sport."
+    },
+    {
+      "english": "We are planning a party.",
+      "german": "Wir planen eine Party."
+    },
+    {
+      "english": "The train station is far from here.",
+      "german": "Der Bahnhof ist weit von hier entfernt."
+    },
+    {
+      "english": "She is reading a book.",
+      "german": "Sie liest ein Buch."
+    },
+    {
+      "english": "He is very intelligent.",
+      "german": "Er ist sehr intelligent."
+    },
+    {
+      "english": "The river is very deep.",
+      "german": "Der Fluss ist sehr tief."
+    },
+    {
+      "english": "We are going to the cinema tonight.",
+      "german": "Wir gehen heute Abend ins Kino."
+    },
+    {
+      "english": "She is watching a TV show.",
+      "german": "Sie sieht sich eine Fernsehsendung an."
+    },
+    {
+      "english": "He is building a model airplane.",
+      "german": "Er baut ein Modellflugzeug."
+    },
+    {
+      "english": "The food is ready.",
+      "german": "Das Essen ist fertig."
+    },
+    {
+      "english": "We are going on vacation next week.",
+      "german": "Wir fahren nächste Woche in den Urlaub."
+    },
+    {
+      "english": "She is very beautiful.",
+      "german": "Sie ist sehr schön."
+    },
+    {
+      "english": "He is studying for his exams.",
+      "german": "Er lernt für seine Prüfungen."
+    },
+    {
+      "english": "The room is very clean.",
+      "german": "Das Zimmer ist sehr sauber."
+    },
+    {
+      "english": "We are having lunch at a restaurant.",
+      "german": "Wir essen in einem Restaurant zu Mittag."
+    },
+    {
+      "english": "She is wearing a hat.",
+      "german": "Sie trägt einen Hut."
+    },
+    {
+      "english": "He is very friendly.",
+      "german": "Er ist sehr freundlich."
+    },
+    {
+      "english": "The sun is setting.",
+      "german": "Die Sonne geht unter."
+    },
+    {
+      "english": "We are going to a concert.",
+      "german": "Wir gehen zu einem Konzert."
+    },
+    {
+      "english": "She is cooking dinner.",
+      "german": "Sie kocht Abendessen."
+    },
+    {
+      "english": "He is working late tonight.",
+      "german": "Er arbeitet heute Abend lange."
+    },
+    {
+      "english": "The library is open.",
+      "german": "Die Bibliothek ist geöffnet."
+    },
+    {
+      "english": "We are going shopping.",
+      "german": "Wir gehen einkaufen."
+    },
+    {
+      "english": "She is writing a report.",
+      "german": "Sie schreibt einen Bericht."
+    },
+    {
+      "english": "He is playing basketball.",
+      "german": "Er spielt Basketball."
+    },
+    {
+      "english": "The book is very interesting.",
+      "german": "Das Buch ist sehr interessant."
+    },
+    {
+      "english": "We are going to the mountains.",
+      "german": "Wir fahren in die Berge."
+    },
+    {
+      "english": "She is a good teacher.",
+      "german": "Sie ist eine gute Lehrerin."
+    }
+  ]
+}
