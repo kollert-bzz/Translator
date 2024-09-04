@@ -27,7 +27,7 @@ body {
 }
 
 .disappear{
-    opacity: 0.1;
+    opacity: 0;
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -100,7 +100,7 @@ body {
     font-size: 17px;
 }
 
-#third-sect {
+#third-sect{
     position: absolute;
     top: 25%;
     left: 50%;
@@ -112,12 +112,24 @@ body {
     min-width: 400px;
 }
 
-#third-sect p{
+#fourth-sect{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 20px;
+    background-color: #e74c3c;
+    padding: 10px 40px;
+    min-width: 400px;
+}
+
+#third-sect p, #fourth-sect p {
     margin-top: -20px;
     font-size: 25px;
 }
 
-#third-sect div{
+#third-sect div, #fourth-sect div{
     margin-top: -20px;
     font-size: 17px;
 }

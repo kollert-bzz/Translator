@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, {useRef, useEffect, useState} from 'react';
 import './styles.css';
 
 export default function App() {
@@ -70,7 +70,7 @@ export default function App() {
 
     const wordGuessed = () => {
         setScore(prevScore => prevScore + 1);
-        if (score + 1 > highScore){
+        if (score + 1 > highScore) {
             setLocalStorageItem('highscore', score);
         }
         const element = document.getElementById('score');
@@ -90,8 +90,7 @@ export default function App() {
         correctScreen.classList.remove('disappear');
         const corWord = document.getElementById('cor-word');
         corWord.innerText = `The solution was: ${currentSentence.missingWord}`;
-
-        const countdownElement = document.getElementById('countdown');
+        const countdownElement = document.getElementById('cor_countdown');
         let countdown = 3;
         const intervalId = setInterval(() => {
             countdownElement.innerText = countdown;
@@ -123,11 +122,16 @@ export default function App() {
             setLocalStorageItem('highscore', score);
             setHighScore(score);
         }
+        const falseScreen = document.getElementById('fourth-sect');
+        falseScreen.classList.remove('disappear');
+        const falseWord = document.getElementById('false-word');
+        falseWord.innerText = `The solution was: ${currentSentence.missingWord}`;
     };
 
     const restartGame = () => {
         document.querySelector('#main-sect').classList.remove('disappear');
         document.querySelector('#second-sect').classList.add('disappear');
+        document.querySelector('#fourth-sect').classList.add('disappear');
         setCounter(0);
         setScore(0);
         const fieldText = document.querySelector('#translation-input');
@@ -177,17 +181,17 @@ export default function App() {
     return (
         <>
             <div className="logo">
-                <img src="./img/logos/logo-no-background.png" alt="logo" />
+                <img src="./img/logos/logo-no-background.png" alt="logo"/>
             </div>
             <div className="no-hearts">
-                <img src="./img/minecraft_no_heart.png" alt="Health" />
-                <img src="./img/minecraft_no_heart.png" alt="Health" />
-                <img src="./img/minecraft_no_heart.png" alt="Health" />
+                <img src="./img/minecraft_no_heart.png" alt="Health"/>
+                <img src="./img/minecraft_no_heart.png" alt="Health"/>
+                <img src="./img/minecraft_no_heart.png" alt="Health"/>
             </div>
             <div className="hearts">
-                <img src="./img/minecraft_heart.png" alt="Health" />
-                <img src="./img/minecraft_heart.png" alt="Health" />
-                <img src="./img/minecraft_heart.png" alt="Health" />
+                <img src="./img/minecraft_heart.png" alt="Health"/>
+                <img src="./img/minecraft_heart.png" alt="Health"/>
+                <img src="./img/minecraft_heart.png" alt="Health"/>
             </div>
             <div id="score">
                 Score: {score} / Highscore: {highScore}
@@ -207,7 +211,12 @@ export default function App() {
             <section id="third-sect" className="disappear">
                 <h2>CORRECT / KORREKT</h2>
                 <p id="cor-word"></p>
-                <div id="countdown">4</div>
+                <div id="cor_countdown">4</div>
+            </section>
+            <section id="fourth-sect" className="disappear">
+                <h2>FALSE / FALSCH</h2>
+                <p id="false-word"></p>
+                <div>Gib nicht auf!</div>
             </section>
         </>
     );
