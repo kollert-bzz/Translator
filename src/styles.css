@@ -11,21 +11,23 @@ body {
 }
 
 .logo img {
-    position: absolute;
+    position: fixed;
     width: 500px;
     height: auto;
-    margin-left: -355px;
-    margin-top: -290px;
+    left: 18%;
+    top: 10%;
+    transform: translate(-50%, -50%);
 }
 
 .hearts, .no-hearts {
-    position: absolute;
-    margin-top: -290px;
-    margin-left: 790px;
+    position: fixed;
+    right: -11%;
+    top: 10%;
+    transform: translate(-50%, -50%);
 }
 
 .disappear{
-    opacity: 0;
+    opacity: 0.1;
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -66,13 +68,14 @@ body {
     display: inline-block;
     min-width: 200px;
     box-sizing: border-box;
-    padding: 2px;
+    padding: 3px;
     font-size: 25px;
     font-weight: bold;
     background-color: transparent;
     border-radius: 10px;
     border: 3px solid black;
     margin-left: 10px;
+    margin-right: 10px;
     white-space: nowrap;
     direction: ltr;
     text-align: left;
@@ -124,4 +127,6 @@ body {
     top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: bold;
 }
