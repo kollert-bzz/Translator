@@ -70,6 +70,7 @@ export default function App() {
 
     document.addEventListener('keypress', (event) => {
         if (event.key === 'Enter') {
+            event.preventDefault();
             if (isRestartButtonVisible()){
                 document.getElementById('restartButton').click();
             } else if (isSkipButtonVisible()){
