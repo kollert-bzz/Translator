@@ -72,23 +72,28 @@ body {
     font-size: 25px;
     font-weight: bold;
     background-color: transparent;
-    border-radius: 10px;
-    border: 3px solid black;
+    border-bottom: 3px solid black;
     margin-left: 10px;
     margin-right: 10px;
     white-space: nowrap;
     direction: ltr;
     text-align: left;
+    max-height: 60px;
 }
 
+#translation-input:focus {
+    outline: none;
+}
+
+
 #second-sect {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 #second-sect button{
-    position: absolute;
+    position: fixed;
     top: 100%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -101,7 +106,7 @@ body {
 }
 
 #third-sect{
-    position: absolute;
+    position: fixed;
     top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -113,7 +118,7 @@ body {
 }
 
 #fourth-sect{
-    position: absolute;
+    position: fixed;
     top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -135,10 +140,24 @@ body {
 }
 
 #score {
-    position: absolute;
+    position: fixed;
     top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 20px;
     font-weight: bold;
+}
+
+
+#skip_button button{
+    position: fixed;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    border: 2px solid black;
+}
+
+#skip_button button:hover{
+    font-size: 17px;
 }

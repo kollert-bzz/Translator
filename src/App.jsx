@@ -1,4 +1,4 @@
-import React, {useRef, useEffect, useState} from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import './styles.css';
 
 export default function App() {
@@ -8,6 +8,8 @@ export default function App() {
     const [counter, setCounter] = useState(0);
     const [score, setScore] = useState(0);
     const [highScore, setHighScore] = useState(0);
+    const [countdownInterval, setCountdownInterval] = useState(null);
+    let hasDot = false;
 
     useEffect(() => {
         fetch('./sentences.json')
@@ -25,24 +27,62 @@ export default function App() {
         }
     }, [sentences]);
 
+    useEffect(() => {
+        const inputElement = document.querySelector('#translation-input');
+        if (inputElement) {
+            inputElement.focus();
+        }
+    }, [currentSentence]);
+
     const fetchRandomSentence = () => {
         const randomIndex = Math.floor(Math.random() * sentences.length);
-        const sentence = sentences[randomIndex];
+        let sentence = sentences[randomIndex];
         const germanWords = sentence.german.split(' ');
         const randomWordIndex = Math.floor(Math.random() * germanWords.length);
+        let missingWord = germanWords[randomWordIndex];
 
-        const missingWord = germanWords[randomWordIndex];
+        if (missingWord.endsWith('.')) {
+            hasDot = true;
+            missingWord = missingWord.slice(0, -1);
+        }
+
         germanWords[randomWordIndex] = '<span id="translation-input" role="textbox" contentEditable></span>';
+
         setCurrentSentence({
             ...sentence,
             missingWord,
             germanWords,
-            randomWordIndex
+            randomWordIndex,
+            hasDot
         });
     };
 
-    const handleKeyDown = (event) => {
+
+    const isSkipButtonVisible = () => {
+        const skipButton = document.getElementById('skip_button');
+        return skipButton && !skipButton.classList.contains('disappear');
+    };
+
+    const isRestartButtonVisible = () => {
+        const restartButton = document.getElementById('second-sect');
+        return restartButton && !restartButton.classList.contains('disappear');
+    };
+
+    document.addEventListener('keypress', (event) => {
         if (event.key === 'Enter') {
+            if (isRestartButtonVisible()){
+                document.getElementById('restartButton').click();
+            } else if (isSkipButtonVisible()){
+                document.getElementById('skipButton').click();
+            }
+        }
+    });
+
+    const handleKeyDown = (event) => {
+        if (isSkipButtonVisible()) {
+            event.preventDefault();
+            skipScreen();
+        } else if (event.key === 'Enter') {
             event.preventDefault();
             submitAnswer();
         }
@@ -51,6 +91,7 @@ export default function App() {
     const submitAnswer = () => {
         const inputElement = inputRef.current;
         const inputValue = inputElement.innerText.trim();
+
         if (inputValue === '') {
             document.getElementById('translation-input').innerText = '';
         } else if (inputValue === currentSentence.missingWord) {
@@ -66,25 +107,35 @@ export default function App() {
                 }
             }
         }
+
+        if (inputElement) {
+            inputElement.blur();
+            inputElement.focus();
+        }
     };
 
     const wordGuessed = () => {
-        setScore(prevScore => prevScore + 1);
-        if (score + 1 > highScore) {
-            setLocalStorageItem('highscore', score);
-        }
-        const element = document.getElementById('score');
-        element.innerText = 'Score: ' + (score + 1) + ' / Highscore: ' + (highScore);
+        setScore(prevScore => {
+            const newScore = prevScore + 1;
+            if (newScore > highScore) {
+                setHighScore(newScore);
+                setLocalStorageItem('highscore', newScore);
+            }
+            return newScore;
+        });
+
+        const skip = document.getElementById('skip_button');
+        skip.classList.remove('disappear');
 
         const updatedGermanWords = currentSentence.germanWords.map((word, index) =>
             index === currentSentence.randomWordIndex ? '<span id="translation-input" role="textbox" contentEditable></span>' : word
         );
-        const updatedSentence = {
+
+        setCurrentSentence({
             ...currentSentence,
             germanWords: updatedGermanWords,
             missingWord: null
-        };
-        setCurrentSentence(updatedSentence);
+        });
 
         const correctScreen = document.getElementById('third-sect');
         correctScreen.classList.remove('disappear');
@@ -95,16 +146,31 @@ export default function App() {
         const intervalId = setInterval(() => {
             countdownElement.innerText = countdown;
             countdown--;
-
             if (countdown < 0) {
                 clearInterval(intervalId);
                 correctScreen.classList.add('disappear');
                 corWord.innerText = '';
                 countdownElement.innerText = '4';
                 fetchRandomSentence();
+                skip.classList.add('disappear');
             }
         }, 1000);
+        setCountdownInterval(intervalId);
     };
+
+
+
+    const skipScreen = () => {
+        clearInterval(countdownInterval);
+        const corWord = document.getElementById('cor-word');
+        corWord.innerText = '';
+        document.getElementById('cor_countdown').innerText = '4';
+        const correctScreen = document.getElementById('third-sect');
+        correctScreen.classList.add('disappear');
+        document.getElementById('skip_button').classList.add('disappear');
+        fetchRandomSentence();
+    };
+
 
     const gameOver = () => {
         const inputElement = inputRef.current;
@@ -118,10 +184,6 @@ export default function App() {
         heartImages.forEach((image) => {
             image.classList.add('disappear');
         });
-        if (score > highScore) {
-            setLocalStorageItem('highscore', score);
-            setHighScore(score);
-        }
         const falseScreen = document.getElementById('fourth-sect');
         falseScreen.classList.remove('disappear');
         const falseWord = document.getElementById('false-word');
@@ -146,23 +208,29 @@ export default function App() {
 
     const renderGermanSentence = () => {
         if (!currentSentence.germanWords) return null;
-
-        return currentSentence.germanWords.map((word, index) => {
-            if (index === currentSentence.randomWordIndex) {
-                return (
-                    <span
-                        key={index}
-                        id="translation-input"
-                        role="textbox"
-                        contentEditable
-                        ref={inputRef}
-                        onKeyDown={handleKeyDown}
-                    >
-                    </span>
-                );
-            }
-            return <span key={index}>{word} </span>;
-        });
+        return (
+            <>
+                {currentSentence.germanWords.map((word, index) => {
+                    if (index === currentSentence.randomWordIndex) {
+                        return (
+                            <span
+                                key={index}
+                                id="translation-input"
+                                role="textbox"
+                                contentEditable
+                                ref={inputRef}
+                                onKeyDown={handleKeyDown}
+                            >
+                            </span>
+                        );
+                    }
+                    return <span key={index}>{word} </span>;
+                })}
+                {currentSentence.hasDot && currentSentence.randomWordIndex === currentSentence.germanWords.length - 1 && (
+                    <span>.</span>
+                )}
+            </>
+        );
     };
 
     const setLocalStorageItem = (key, value) => {
@@ -172,10 +240,6 @@ export default function App() {
     const getLocalStorageItem = (key) => {
         const item = localStorage.getItem(key);
         return item ? JSON.parse(item) : null;
-    };
-
-    const removeLocalStorageItem = (key) => {
-        localStorage.removeItem(key);
     };
 
     return (
@@ -206,7 +270,7 @@ export default function App() {
             </section>
             <section id="second-sect" className="disappear">
                 <h1>GAME OVER!</h1>
-                <button onClick={restartGame}>Play again</button>
+                <button onClick={restartGame} id="restartButton">Play again</button>
             </section>
             <section id="third-sect" className="disappear">
                 <h2>CORRECT / KORREKT</h2>
@@ -216,7 +280,10 @@ export default function App() {
             <section id="fourth-sect" className="disappear">
                 <h2>FALSE / FALSCH</h2>
                 <p id="false-word"></p>
-                <div>Gib nicht auf!</div>
+                <div>Don't give up!</div>
+            </section>
+            <section id="skip_button" className="disappear">
+                <button onClick={skipScreen} id="skipButton">Skip</button>
             </section>
         </>
     );
